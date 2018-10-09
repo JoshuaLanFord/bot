@@ -51,14 +51,4 @@ ClientBot.on('message', message => {
   }
 });
 
-ClientBot.on("guildMemberAdd", member => {
-	let role = member.guild.roles.find("name", "Leakers")
-	member.guild.channels.find("name", ":airplane:️aéroport:airplane:").send(':airplane: $(member.user.username) vient de rejoindre le serveur !')
-	member.addRole(roles)
-})
-
-ClientBot.on("guildMemberRemove", member => {
-	member.guild.channels.find("name", ":airplane:️aéroport:airplane:").send(':airplane: $(member.user.username) vient de quitter le serveur !')
-})
-
 ClientBot.login('NDk5MTUxMDg2MjcyMzgwOTI4.Dp4HzA.gbTs2witc_UUL9fRHVp1h9Ci8kw');
