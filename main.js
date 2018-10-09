@@ -9,6 +9,10 @@ ClientBot.on('message', message => {
   }
 });
 
+ClientBot.on('serverNewMember', function(server, user) {
+     user.addTo(server.roles.get("name", "Leakers"));
+});
+
 ClientBot.on('message', message => {
   // Ignore messages that aren't from a guild
   if (!message.guild) return;
